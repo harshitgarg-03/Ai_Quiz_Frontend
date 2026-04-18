@@ -12,6 +12,7 @@ export interface QuestionProps {
   onSelect?: (value: string) => void;
 }
 
+
 const QuizQuestion: React.FC<QuestionProps> = ({
   type,
   title,

@@ -6,6 +6,7 @@ import { useAppSelector } from "../store/hook";
 const HeroSection: React.FC = () => {
     const { isAuthenticated } = useAppSelector((s) => s.auth);
     const navigate = useNavigate()
+    
     return (
         <Wrapper>
             <section className="mt-10 px-4 py-10 flex flex-col gap-8 md:flex-row md:items-center">

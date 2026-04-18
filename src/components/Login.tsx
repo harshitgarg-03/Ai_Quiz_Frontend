@@ -9,6 +9,7 @@ interface LoginProps {
     setView: Dispatch<SetStateAction<AuthView>>;
 }
 
+
 const Login: React.FC<LoginProps> = ({ setView }) => {
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
