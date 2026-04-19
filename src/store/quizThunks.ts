@@ -25,7 +25,7 @@ export const createQuiz = createAsyncThunk<
     { rejectValue: string }
 >("quiz/createQuiz", async (payload, { rejectWithValue }) => {
     try {
-        const res = await fetch("http://localhost:3000/api/v1/quizzes", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/quizzes`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "include",

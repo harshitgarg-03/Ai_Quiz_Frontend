@@ -21,7 +21,9 @@ async function fetchRequest<T>(
     method: string = "GET",
     body?: unknown
 ): Promise<ApiResponse<T>> {
-    const base = import.meta.env.VITE_API_URL || "http://localhost:3000/api/v1";
+    console.log("url is ", import.meta.env.VITE_API_URL);
+    
+    const base = import.meta.env.VITE_API_URL;
     
     
     const res = await fetch(`${base.replace(/\/+$/, "")}/${path.replace(/^\/+/, "")}`, {

@@ -5,7 +5,7 @@ export const quizApi = {
         questionNo: number;
         title?: string;
     }) => {
-        const res = await fetch("http://localhost:3000/api/v1/quizzes", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/quizzes`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "include", // important for cookie auth
