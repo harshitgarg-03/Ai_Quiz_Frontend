@@ -35,14 +35,12 @@ const CreateQuizPage: React.FC = () => {
     let score = 0;
 
     currentQuiz.questions.forEach((q: any, i: number) => {
-      console.log(currentQuiz.questions);
+      // console.log(currentQuiz.questions);
       
       const userAns = normalize(answers[i] || "");
-      const correctAns = normalize(q.answer || "");
+      const correctAns = normalize(q.answer || q.correctAnswer);
       
-      if (q.quizType === "fillup" || q.type === "fillup") {
-        if (userAns === correctAns) score++;
-      } else if (q.quizType === "codeerror" || q.type === "codeerror") {
+      if (q.quizType === "codeerror" || q.type === "codeerror") {
         if (userAns.includes(correctAns)) score++;
       } else {
         // MCQ
